@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>protfolio</title>
+        <style>
+            body{
+                font-family: 'Courier New', Courier, monospace;
+                margin: 0;
+                padding: 0;
+                background-color: rgb(237, 242, 242);
+            }
+            header{
+                background-color: dimgray;
+                color: azure;
+                text-align: center;
+                padding: 2rem 0;
+                position: relative;
+            }
+            .profile-pitcher{
+                width: 100px;
+                height: 100px;
+                border-radius: 75%;
+                object-fit: cover;
+                position: absolute;
+                top: 75px;
+                left: 75px;
+            }
+            .header-content h1{
+                font-size: 2.5rem;
+            }
+            nav{
+                background-color: dimgray;
+                color: black;
+                text-align: center;
+            }
+            nav ul{
+                list-style-type: none;
+                padding: 10px;
+            }
+            nav ul li{
+                display: inline;
+                margin: 0 20px;
+            }
+            nav ul li a{
+                text-decoration: none;
+                color: azure;
+            }
+            .section-content{
+                background-color: darkgrey;
+                padding: 2rem;
+                margin: 1rem;
+                border-radius: 20px;
+                box-shadow: 0 0 10px rgba(0,0, 0,0.1);
+            }
+            footer{
+                text-align: center;
+                padding: 1rem 0;
+                background-color: #333;
+                color: white;
+            }
+            ul{
+                list-style-type: lower-roman;
+                padding-left: 20px;
+            }
+            .skills-bar{
+                padding: 25px 30px;
+            }
+            .skills-bar .bar{
+                margin: 25px o;
+            }
+            .skills-bar .bar .info span{
+                font-size: 1rem;
+                font-weight: 500;
+            }
+
+            .skills-bar .bar .info {
+                 margin-bottom: 8px;
+                color: #10100f;
+            }
+
+            .skills-bar .bar .progress-line {
+                position: relative;
+                height: 10px;
+                width: 550px;
+                background: #f0f0f0;
+                border-radius: 10px;
+                transform: scaleX(0);
+                transform-origin: left;
+                animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+            }
+
+            .bar .progress-line span {
+                position: absolute;
+                background: #333434;
+                height: 100%;
+                border-radius: 10px;
+                transform: scaleX(0);
+                transform-origin: left;
+                animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+            }
+
+            @keyframes animate {
+                100% {
+                    transform: scaleX(1);
+                }
+            }
+
+            .progress-line .html {
+                width: 80%;
+            }
+            .progress-line .css {
+                width: 70%;
+            }
+            .progress-line .bootstrap {
+                width: 50%;
+            }
+            .progress-line .javascript {
+                width: 50%;
+            }
+            .progress-line .c {
+                width: 50%;
+            }
+
+            .bar .progress-line span::before {
+                position: absolute;
+                content: "";
+                height: 0;
+                right: 0;
+                top: -12px;
+                width: 0;
+                border: 7px solid transparent;
+                border-bottom-width: 0px;
+                border-right-width: 0px;
+                border-top-style: #f0f0f0;
+                border-top-color: #f0f0f0;
+            }
+
+            .bar .progress-line span::after {
+                position: absolute;
+                right: 0;
+                top: -28px;
+                color: #07374a;
+                font-size: 12px;
+                font-weight: 700;
+                background: #cec7c7;
+                padding: 1px 8px;
+                border-radius: 3px;
+            }
+
+            .progress-line .html::after {
+                 content: "80%";
+            }
+            .progress-line .css::after {
+                content: "70%";
+            }
+            .progress-line .drawing::after {
+                content: "80%";
+            }
+            .progress-line .javascript::after {
+                content: "50%";
+            }
+            .progress-line .python::after {
+                content: "50%";
+            }
+
+            .navbar.solid {
+                background-color: #07374a;
+                transition: background-color 1s ease 0s;
+                box-shadow: 0 0 4px rgb(7 55 74 / 20%);
+                z-index: 500;
+            }
+
+            .navbar.solid .navbar-brand {
+                display: inline-block;
+                color: #3a3a38;
+                transition: color 1s ease 0s;
+            }
+
+            .navbar-brand {
+                display: none;
+                color: #30302e;
+                font-weight: 400;
+            }
+
+            .work-arrow {
+                 margin: 2rem 0;
+            }
+
+            .work-arrow a {
+                font-size: 1rem;
+                text-decoration: none;
+                color: #292d2c;
+            }
+
+            .work-arrow-2 {
+                margin: 2rem 0;
+            }
+
+            .work-arrow-2 a {
+                font-size: 1rem;
+                text-decoration: none;
+                color: #212423;
+                display: none;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <header>
+        <div class="header-content">
+            <img src="prathi.jpg" alt="My profile" class="profile-pitcher">
+            <h1>Ponprathiba</h1>
+            <p>Iam a BCA student</p>
+        </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#academic participation">Academic Participation</a></li>
+                <li><a href="#award winning">Award Winning</a></li>
+                <li><a href="#extra curicular activities">Extra Curicular Activities</a></li>
+                <li><a href="skills">Skills</a></li>
+            </ul>
+        </nav>
+        <section id="about">
+            <div class="section-content">
+                <h2>About Me</h2>
+                <p>Hello Everyone Thank You For Visiting my page.
+                <br>Iam a student in Govindammal Aditanar College For Women.
+                <br>Iam studying final year of BCA </p>
+            </div>
+        </section>
+        <section id="academic participation">
+            <div class="section-content">
+                <h2>Academic Participation</h2>
+                <p>In our Academic We have the Associations For Every Department.
+                <br>I have participated in My BCA Association and Youth Welfare Association</p>
+                <h2>The Below Are The Competition Which I Have Participated.</h2>
+                <ul>
+                    <li>Software Maarketing</li>
+                    <li>PPT Presentation</li>
+                    <li>On The Spot Speech</li>
+                    <li>Water Color Painting</li>
+                    <li>Ink Drawing</li>
+                    <li>Wealth Form Waste</li>
+                    <li>Poster Making</li>
+                </ul>
+            </div>
+        </section>
+        <section id="award winning">
+            <div class="section-content">
+                <h2>Award Winning</h2>
+                <p>In My Association Participation I Won This Prizes.
+                <br> </p>
+                <th style="font-size: larger;font-weight: 100;">Winning Prize</th>
+                <table border="10" cellpadding="10" cellspacing="1"width="600" bordercolor="black">
+                    <tr style="color: rgb(16, 13, 13);font-weight: bold;background-color: darkgray;">
+                    <td>Competition</td>
+                    <td>Prizes</td>
+                    </tr>
+                    <tr>
+                        <td>Software Maarketing</td>
+                        <td>II Prize</td>
+                    </tr>
+                    <tr>
+                        <td>PPT Presentation</td>
+                        <td>II Prize</td>
+                    </tr>
+                    <tr>
+                        <td>On The Spot Speech</td>
+                        <td>II Prize</td>
+                    </tr>
+                    <tr>
+                        <td>Water Color Painting</td>
+                        <td>II Prize</td>
+                    </tr>
+                    <tr>
+                        <td>Wealth From Waste</td>
+                        <td>I Prize</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section id="extra curicular activities">
+            <div class="section-content">
+                <h2>Extra Curicular Activities</h2>
+                <p>I Know Type Writing.
+                <br>I have First Class With Distniction In Type Writing.
+                <br>I Very Much Intrested In Drawing.</p>
+            </div>
+        </section>
+        <section id="skills">
+            <div class="section-content">
+                <h2>Skills</h2>
+                <div class="skills-bar">
+                    <div class="bar">
+                        <div class="info">
+                            <span>Html</span>
+                        </div>
+                        <div class="progress-line">
+                            <span class="html"></span></div>
+                            <div class="bar">
+                                <div class="info">
+                                    <span>CSS</span>
+                                </div>
+                                <div class="progress-line"><span class="css"></span></div>
+                                    <div class="bar">
+                                        <div class="info">
+                                            <span>Java Script</span>
+                                        </div>
+                                        <div class="progress-line"><span class="javascript"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+        <div class="contact" id="contact-me">
+            <div class="container">
+              <div class="contact-content">
+                <h2>Contact Me</h2>
+                <p class="mail">
+                  Get in touch with me <i class="fas fa-arrow-right"></i> prathi@gmail.com
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <script>
+            document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+                anchor.addEventListener('click',function(e){
+                    e.preventDefault();
+                    const targetId=this.getAttribute('href').substring(1);
+                    const targetElement=document.getElementById(targetId);
+                    if (targetElement){
+                        window.scrollTo({
+                            top:targetElement.offsetTop,
+                            behavior:"smooth"
+                        });
+                    }
+                });
+            });
+          </script>
+    </body>
+</html>
